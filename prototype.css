@@ -1,0 +1,21 @@
+body {
+    background-color: grey;
+    color: white;
+
+}
+label{
+    
+}
+.Parent{
+    display: flex;
+    text-align: center;
+    line-height: 0px;
+}
+.Right-Child{
+    flex: 1;
+    margin: 10px
+}
+.Left-Child{
+    flex: 1;
+    margin: 10px
+}
