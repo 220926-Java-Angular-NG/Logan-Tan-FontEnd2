@@ -1,7 +1,8 @@
 let mainDiv = document.getElementById("main");
 
 let header = document.createElement('h1');
-header.innerHTML = "Hi There";
+var tcolor = "Azure"
+header.innerHTML = "Hi There, lets test";
 if(mainDiv){
     mainDiv.prepend(header);
 } else{
@@ -25,6 +26,7 @@ function appendtolist(event){
         document.getElementById("value").value = "";
         box.classList.add('listele');
         item.classList.add('des');
+        item.style.color = `${tcolor}`;
         box.setAttribute("type","checkbox");
         boxes.appendChild(box);
         dess.appendChild(item);
@@ -49,16 +51,20 @@ function rmfe(){
 function red(){
     document.body.style.backgroundColor = "red"
     document.body.style.color="violet"
+    tcolor = "BlueViolet";
 }
 function blue(){
     document.body.style.backgroundColor = "blue"
     document.body.style.color="aquamarine"
+    tcolor = "Cyan";
 }
 function green(){
     document.body.style.backgroundColor = "green"
     document.body.style.color="yellowgreen"
+    tcolor = "Chartreuse";
 }
 function grey(){
     document.body.style.backgroundColor = "grey"
     document.body.style.color="white"
+    tcolor = "Azure";
 }
