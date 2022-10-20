@@ -7,22 +7,40 @@ if(mainDiv){
 } else{
     console.log("null");
 }
-let checklist = document.getElementById("checklist");
+let boxes = document.getElementById("boxes");
+let dess = document.getElementById("des");
 document.getElementById("add").addEventListener("click",appendtolist);
-document.getElementById("remove").addEventListener("click",rmlst)
+document.getElementById("remove").addEventListener("click",rmfe)
 function appendtolist(event){
+
     event.preventDefault();
     let item = document.createElement('label');
-    let br = document.createElement('br');
     let box = document.createElement('input');
-    item.innerHTML= document.getElementById("value").value;
-    document.getElementById("value").value = "";
-    box.setAttribute("type","checkbox");
-    checklist.appendChild(box);
-    checklist.appendChild(item);
-    checklist.appendChild(br);
+    item.innerHTML= `<p>${document.getElementById("value").value}</p>`
+    if(document.getElementById("value").value.length > 0){
+        document.getElementById("value").value = "";
+        box.classList.add('listele');
+        item.classList.add('des');
+        box.setAttribute("type","checkbox");
+        boxes.appendChild(box);
+        dess.appendChild(item);
+        //checklist.appendChild(br);
+    }
 
 
 }
-function rmlst(){
+function rmfe(){
+    let lst = document.getElementsByClassName('listele');
+    let des = document.getElementsByClassName('des');
+    let brb = document.getElementsByClassName('brb');
+    let brd = document.getElementsByClassName('brd');
+    for (let i = 0; i < lst.length; i++) {
+        if(lst[i].checked){ //remove the first checked element
+            lst[i].remove();
+            des[i].remove();
+            break;
+        }
+    }
+
+
 }

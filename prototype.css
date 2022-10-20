@@ -3,8 +3,17 @@ body {
     color: white;
 
 }
-label{
-    
+input.listele{
+    width: 26px;
+    height: 26px;
+}
+.listele{
+    float:right;
+    clear: both;
+}
+.des{
+    float: left;
+    clear:both
 }
 .Parent{
     display: flex;
