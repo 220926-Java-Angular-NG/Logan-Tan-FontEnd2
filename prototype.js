@@ -11,6 +11,10 @@ let boxes = document.getElementById("boxes");
 let dess = document.getElementById("des");
 document.getElementById("add").addEventListener("click",appendtolist);
 document.getElementById("remove").addEventListener("click",rmfe)
+document.getElementById("red").addEventListener("click",red)
+document.getElementById("blue").addEventListener("click",blue)
+document.getElementById("green").addEventListener("click",green)
+document.getElementById("grey").addEventListener("click",grey)
 function appendtolist(event){
 
     event.preventDefault();
@@ -41,6 +45,20 @@ function rmfe(){
             break;
         }
     }
-
-
+}
+function red(){
+    document.body.style.backgroundColor = "red"
+    document.body.style.color="violet"
+}
+function blue(){
+    document.body.style.backgroundColor = "blue"
+    document.body.style.color="aquamarine"
+}
+function green(){
+    document.body.style.backgroundColor = "green"
+    document.body.style.color="yellowgreen"
+}
+function grey(){
+    document.body.style.backgroundColor = "grey"
+    document.body.style.color="white"
 }
